@@ -6,21 +6,21 @@
 #    By: lnicoter <lnicoter@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/04/19 10:44:57 by lnicoter          #+#    #+#              #
-#    Updated: 2023/04/26 00:28:34 by lnicoter         ###   ########.fr        #
+#    Updated: 2023/05/04 11:08:11 by lnicoter         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = push_swap
 
-SRC		=	big_sort.c checks.c five_sort.c ft_error.c list_utils.c \
+SRC		=	checks.c five_sort.c ft_error.c list_utils.c \
 			movesone.c movesthree.c movestwo.c push_swap.c three_sort.c \
-			list_utils2.c prova.c\
+			list_utils2.c lis.c phaseone.c \
 
 LIBFT	=	libft/libft.a
 
 OBJ		=	$(SRC:.c=.o)
 
-CC		=	gcc
+CC		=	gcc -g
 
 RM		=	rm -f
 
@@ -43,6 +43,9 @@ fclean: 	clean
 re:			fclean all
 
 .PHONY:		all clean fclean re
+
+
+
 
 
 

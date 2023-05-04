@@ -6,7 +6,7 @@
 /*   By: lnicoter <lnicoter@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/06 18:46:29 by lnicoter          #+#    #+#             */
-/*   Updated: 2023/04/22 12:57:24 by lnicoter         ###   ########.fr       */
+/*   Updated: 2023/05/04 11:22:54 by lnicoter         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,7 +45,7 @@ void	list_display(t_node *p)
 		ft_printf("|%d|\n⬇⬇⬇\n", p->data);
 		p = p->next;
 	}
-	ft_printf("NULL");
+	ft_printf("NULL\n");
 }
 
 void	list_insert(t_node **first, int data)

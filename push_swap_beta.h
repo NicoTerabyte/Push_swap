@@ -6,7 +6,7 @@
 /*   By: lnicoter <lnicoter@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/05 17:29:01 by lnicoter          #+#    #+#             */
-/*   Updated: 2023/04/26 02:41:08 by lnicoter         ###   ########.fr       */
+/*   Updated: 2023/05/04 11:22:32 by lnicoter         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,7 @@
 #include <time.h>
 #include <limits.h>
 #include <unistd.h>
+#include <string.h>
 #include "./libft/libft.h"
 
 typedef struct s_node
@@ -37,7 +38,10 @@ int		max_finder_a(t_node *stack_a);
 void	ft_error(char *type);
 void	check_all(t_node **stack_a, int ac, char **av);
 int		list_size(t_node *stack);
-int		lets_try(t_node **stack_a, t_node **stack_b);
+void	lets_try(t_node **stack_a, t_node **stack_b);
+void	select_num(t_node **stack_a, t_node **stack_b);
+void	calculate_mv(t_node **stack_a, t_node **stack_b);
+void	select_num(t_node **stack_a, t_node **stack_b);
 
 //sorting
 void	three_sorting(t_node **stack_a);

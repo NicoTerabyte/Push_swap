@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   prova.c                                            :+:      :+:    :+:   */
+/*   lis.c                                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lnicoter <lnicoter@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/25 17:52:49 by lnicoter          #+#    #+#             */
-/*   Updated: 2023/04/28 05:29:01 by lnicoter         ###   ########.fr       */
+/*   Updated: 2023/05/02 17:59:56 by lnicoter         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -218,11 +218,8 @@ io coglione ho gestito male la memoria in find_dup e voila bordello
 per fortuna sembra tutto risolto
 ovviamente aveva qualche problema di allocazione anche la funzione
 che faceva la LIS questa qua sotto
-
-La sequenza maledetta????
-4 8 2 9 12 1 27 13 32 10
 */
-int lets_try(t_node **stack_a, t_node **stack_b)
+void	lets_try(t_node **stack_a, t_node **stack_b)
 {
 	int	*arr;
 	int	n;
@@ -243,19 +240,7 @@ int lets_try(t_node **stack_a, t_node **stack_b)
 		tmp = tmp->next;
 	}
 	lis_seq = lis(arr, n, &len);
-    //printf("Input array: ");
-  //  print_array(arr, n);
-
-	//printf("\nLongest increasing subsequence: ");
-	//print_array(lis_seq, len);
-
-	/*possibile funzione che TEORICAMENTE manda i valori da stack_a a b*/
 	push_lis(stack_a, stack_b, lis_seq);
-	//printf("lista aggiornate A\n");
-	//list_display(*stack_a);
-	//printf("\nlista aggiornate B\n");
-	//list_display(*stack_b);
 	free(lis_seq);
 	free(arr);
-	return (0);
 }
